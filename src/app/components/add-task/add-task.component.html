@@ -25,8 +25,11 @@
       <div class="input-group mt-3">
         <mat-form-field appearance="outline" class="theme-form-field w-100">
           <mat-label>Due Date (Optional)</mat-label>
-          <input matInput type="date" formControlName="dueDate" [min]="today">
-          <mat-icon matSuffix class="theme-form-icon">event</mat-icon>
+          <input matInput [matDatepicker]="picker" formControlName="dueDate" [min]="today">
+          <mat-datepicker-toggle matIconSuffix [for]="picker">
+            <mat-icon matDatepickerToggleIcon class="theme-form-icon">event</mat-icon>
+          </mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
       </div>
     </form>
