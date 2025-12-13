@@ -4,6 +4,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDividerModule } from '@angular/material/divider';
 import { Task } from '../../models/interface';
@@ -14,7 +16,7 @@ import { finalize } from 'rxjs';
 
 @Component({
   selector: 'app-add-task',
-  imports: [MatCardModule, MatInputModule, MatFormFieldModule, MatButtonModule, MatIconModule, ReactiveFormsModule, MatDividerModule],
+  imports: [MatCardModule, MatInputModule, MatFormFieldModule, MatButtonModule, MatIconModule, MatDatepickerModule, MatNativeDateModule, ReactiveFormsModule, MatDividerModule],
   templateUrl: './add-task.component.html',
   styleUrl: './add-task.component.scss'
 })
